@@ -1,0 +1,21 @@
+{% extends "webapp/header.html" %}
+
+{% block content %}
+<div clas="container">
+    <h1>Welcome to the User Input Test</h1>
+    <p>Please tell us your favorite quote:</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" value="submit">Submit</button>   
+    </form>
+
+    <h2>Record of posts:</h2>
+    {{ text }}
+    {% for post in posts %}
+        <h3>Quote: {{ post.post }}</h3>
+        <p>Posted on {{ post.date }}</p>
+    {% endfor %}
+
+</div>
+{% endblock %}
