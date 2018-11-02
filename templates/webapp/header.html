@@ -9,7 +9,13 @@
 <body class="body" style="background-color:#cecece">
     <div>
             <div clas="container">
-                <h3><a href='/home'>Home</a>     <a href='/webapp'>WebAppForm</a></h3>
+                <nav class="navbar navbar-default">
+                    <ul class="header">
+                        <li><a href='/home'>Home</a></li>
+                        <li><a href='/webapp'>WebAppForm</a></li>
+                        <li><a href='/accounts'>Login</a></li>
+                    </ul>
+                </nav>
             </div>
         {% block content %}
         {% endblock %}

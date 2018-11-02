@@ -13,8 +13,10 @@
     <h2>Record of posts:</h2>
     {{ text }}
     {% for post in posts %}
-        <h3>Quote: {{ post.post }}</h3>
-        <p>Posted on {{ post.date }}</p>
+        <ul>
+        <li><h3>Quote: {{ post.post }}</h3>
+        <p>Posted on {{ post.date }}</p></li>
+        </ul>
     {% endfor %}
 
 </div>

@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r"^webapp/", include('webapp.urls')),
     url(r"^home/", include('home.urls')),
+    url(r"^accounts/", include('accounts.urls'))
 ]
