@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from .views import AccountsView
-from django.contrib.auth import login
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
-    url(r'^$', AccountsView.as_view()),
+    url('login/', LoginView.as_view(template_name='accounts/login.html'), name="login"),
 ]
