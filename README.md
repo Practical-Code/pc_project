@@ -13,7 +13,7 @@ Description:
 
 11/9/2018 
 -- Edited minor spelling issues found within code. This cleaned up some of the layout issues. 
--- Included Bootstrap CSS.
+-- Included Bootstrap CSS 3.3.7.
 -- Updated navigation bar with Bootstrap.
 
 11/12/2018
@@ -23,3 +23,15 @@ Description:
 -- Syntax issues between versions seems to have been the issue behind the login issue. As of Django-2.1, the old function-based views have been removed, as specified in the release notes found here https://docs.djangoproject.com/en/2.1/releases/2.1/ into class-based views: the LoginView and LogoutView classes.
 -- Login page has been updated, background systems need to be set in place.
 -- Updated description to better explain site. 
+
+11/14/2019
+--Superuser created, Admin - 123123
+-- http://127.0.0.1:8000/admin/ takes you to a prerendered Django admin setup (remember to python3 manage.py runserver before hand).
+-- Added in Logout page and Register page.
+
+11/16/2018
+-- Updated to Bootstrap 4.1.3.
+-- Registration works!!! 
+-- Site now directs user to login, and when logged out it directs the user to log back in.
+-- User authentication gives access to WebApp form. 
+-- Added a things to be added on authenticated home page.
