@@ -23,7 +23,6 @@ class WebAppView(TemplateView):
 
             text = form.cleaned_data['post']
             form = WebAppForm()
-            return redirect('home:home')
 
         args = {'form': form, 'text': text}
         return render(request, self.template_name, args)
