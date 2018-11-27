@@ -2,8 +2,20 @@
 
 {% block content %}
 <div class="container">
-    <h1>Welcome to the home page.</h1>
+    {% if user.is_authenticated %}
+    <h2>Welcome to the home page {{ user.username }}.</h2>
     <p>Here you will have access to both login in and interacting with a Web Form. </p>
-    <p>The Web Form will take your favorite quote and keep track of it while also allowing others to enter their own. </p>
+    <p>The Web Form will take your favorite quote and keep track of it while also allowing others to enter their own.</p>
+        <p><div class="alert alert-light" role="alert">
+            <h4>Things to do...</h4>
+            <ul>Profile access</ul>
+            <ul>Changing passwords</ul>
+            <ul>Changing emails</ul>
+            <ul>Connecting quote to user</ul>
+            <ul>.ect</ul>
+        </div></p>
+    {% else %}
+    <h2>You are not logged in, please login.</h2>
+    {% endif %}
 </div>
 {% endblock %}
