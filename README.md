@@ -34,4 +34,7 @@ Description:
 -- Registration works!!! 
 -- Site now directs user to login, and when logged out it directs the user to log back in.
 -- User authentication gives access to WebApp form. 
--- Added a things to be added on authenticated home page.
+-- Added a 'things to be added' on authenticated home page.
+
+12/4/2018
+-- Updated password storage algorithm to Bcrypt. Bcrypt is a long-term password storage and is not used as a default as it uses third-party libraries. 
