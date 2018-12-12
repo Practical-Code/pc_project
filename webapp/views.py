@@ -2,14 +2,14 @@ from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
 
 from webapp.forms import WebAppForm
-from .models import Post
+from webapp.models import Post
 
 class WebAppView(TemplateView):
     template_name = 'webapp/webapp.html'
 
     def get(self, request):
         form = WebAppForm()
-        posts= Post.objects.all()
+        posts = Post.objects.all()
 
         args = {'form': form, 'posts': posts}
         return render(request, self.template_name, args)

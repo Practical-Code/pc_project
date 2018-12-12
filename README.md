@@ -38,3 +38,6 @@ Description:
 
 12/4/2018
 -- Updated password storage algorithm to Bcrypt. Bcrypt is a long-term password storage and is not used as a default as it uses third-party libraries. 
+
+12/12/18
+-- 
