@@ -19,7 +19,7 @@
     {% for post in posts %}
         <ul>
         <li><h3>Quote: {{ post.post }}</h3>
-        <p>Posted on {{ post.date }} by {{ post.User }}</p></li>
+        <p>Posted on {{ post.date }} by {{ post.User.id }}</p></li>
         </ul>
     {% endfor %}
 
