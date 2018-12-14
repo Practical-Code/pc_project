@@ -10,8 +10,9 @@ class WebAppView(TemplateView):
 
     def get(self, request):
         form = WebAppForm()
-        posts = Post.objects.all()
-        users = User.objects.exclude(id=request.users)
+        posts = Post.objects.all().order_by('-date')
+        users = User.objects.exclude()
+
 
         args = {'form': form, 'posts': posts, 'users': users}
         return render(request, self.template_name, args)
