@@ -4,4 +4,4 @@ from django.contrib.auth.models import User
 class Post(models.Model):
     post = models.CharField(max_length=500)
     date = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE,)
+    user = models.ForeignKey(User, default=None, on_delete=None)

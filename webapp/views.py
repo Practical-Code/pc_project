@@ -27,5 +27,5 @@ class WebAppView(TemplateView):
             text = form.cleaned_data['post']
             form = WebAppForm()
 
-        args = {'form': form, 'text': text}
+        args = {'form': form, 'text': text, 'users': users}
         return render(request, self.template_name, args)

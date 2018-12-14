@@ -39,5 +39,6 @@ Description:
 12/4/2018
 -- Updated password storage algorithm to Bcrypt. Bcrypt is a long-term password storage and is not used as a default as it uses third-party libraries. 
 
-12/12/18
--- 
+12/13/18
+-- Removed db.sqlite3 in the homes of clearing up the null issue with the missing database. Migrated and recreated super user Admin - 123123. 
+-- Created a 'WSGIRequest' object has no attribute 'users' issue. 
