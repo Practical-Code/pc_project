@@ -42,3 +42,4 @@ Description:
 12/13/18
 -- Removed db.sqlite3 in the homes of clearing up the null issue with the missing database. Migrated and recreated super user Admin - 123123. 
 -- Created a 'WSGIRequest' object has no attribute 'users' issue. 
+-- Removed id=request.Users from webapp.views.py and edited webapp.html. Login name will now attach to the posted quote. 
