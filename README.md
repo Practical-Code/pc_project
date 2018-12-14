@@ -46,3 +46,4 @@ Description:
 -- Login name will now attach to the posted quote. Deleting database for a clean test. 
 -- Slight database error, cleaned up with remembering to create a superuser. 
 -- Created static folder.
+-- Removed static folder, unneeded artifact for failed idea. 
