@@ -1,17 +1,19 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
 
 from webapp.forms import WebAppForm
-from .models import Post
+from webapp.models import Post
 
 class WebAppView(TemplateView):
     template_name = 'webapp/webapp.html'
 
     def get(self, request):
         form = WebAppForm()
-        posts= Post.objects.all()
+        posts = Post.objects.all()
+        users = User.objects.exclude(id=request.users)
 
-        args = {'form': form, 'posts': posts}
+        args = {'form': form, 'posts': posts, 'users': users}
         return render(request, self.template_name, args)
 
     def post(self, request):
