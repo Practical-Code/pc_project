@@ -29,3 +29,7 @@ class WebAppView(TemplateView):
 
         args = {'form': form, 'text': text}
         return render(request, self.template_name, args)
+
+
+
+        
