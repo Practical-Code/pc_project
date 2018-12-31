@@ -1,27 +1,31 @@
 {% extends "header.html" %}
 
-{% block head %}
-<title>Quote Application</title>
-{% endblock %}
-
 {% block content %}
-<div class="container">
-    <h2>Welcome to the User Input Test</h2>
-    <p>Please tell us your favorite quote:</p>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" value="submit">Submit</button>   
-    </form>
 
-    <h2>Record of posts:</h2>
-    {{ text }}
-    {% for post in posts %}
-        <ul>
-        <li><h3>Quote: {{ post.post }}</h3>
-        <p>Posted on {{ post.date }} by {{ post.user }}</p></li>
-        </ul>
-    {% endfor %}
-
+<div class="card">
+    <div class="card-header">
+        <div class="container" "align-self-center mr-3">
+            <div class="card-header">
+                <h1>Welcome to the Quote Machine!</h1>
+            </div>
+            <br>
+            <div class="card-body"><center>
+                <p>Please tell us your favorite quote:</p>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" value="submit">Submit</button>   
+                </form>
+            </div>
+            <br>
+            <br>
+            <h3>Record of posts:</h3>
+            {{ text }}
+            {% for post in posts %}
+                <h4>{{ post.post }}</h4>
+                <p>Posted on {{ post.date }} by {{ post.user }}</p>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
